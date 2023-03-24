@@ -1,0 +1,10 @@
+version: '3.10'
+
+services:
+  django:
+    image: merch:0.0.1
+    command: python merch/manage.py runserver 0.0.0.0:8000
+    build: .
+    ports:
+     - "8000:8000"
+     
