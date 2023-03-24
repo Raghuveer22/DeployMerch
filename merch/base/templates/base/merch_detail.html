@@ -1,0 +1,16 @@
+<h1>{{merch.name}}</h1>
+<img style="height:100px; width:100px" src = "media/{'merch.photo'}" alt="" >
+
+<h1>Size: {{merch.size}}</h1>
+<h1>other sizes:</h1>
+<a>
+    <a href="{% url 'merch-detail'  'S' merch.name %}"><h1>S</h1><a>
+    <a href="{% url 'merch-detail'  'M' merch.name %}"><h1>M</h1><a>
+    <a href="{% url 'merch-detail'  'L' merch.name %}"><h1>L</h1><a>
+    <a href="{% url 'merch-detail'  'XL' merch.name %}"><h1>XL</h1><a>
+    <a href="{% url 'merch-detail'  'XXL' merch.name %}"><h1>XXL</h1><a>
+</a>
+    
+<h1>Cost:{{ merch.cost }}</h1>
+<h1>Left:{{ merch.left }}</h1>
+<a href="{% url 'add-order' pk=merch.id %}">Buy now</a>

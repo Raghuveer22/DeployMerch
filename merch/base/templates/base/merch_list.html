@@ -1,0 +1,5 @@
+{% for merch in allMerch %}
+    <a href="{% url 'merch-detail'  merch.size merch.name %}"><h1>{{ merch.name }}</h1><a>
+    <img style="height:100px; width:100px" src = "/media/{{ merch.photo }}" alt="" >
+{{merch.photo}}
+{% endfor %}
